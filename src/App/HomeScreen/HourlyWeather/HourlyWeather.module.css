@@ -1,0 +1,9 @@
+@import url('../../../fonts.css');
+
+.title{
+    display: inline-block;
+    margin: 0 0 10px;
+    color: rgba(222, 221, 221, 1);
+    font-family: 'PoppinsSemiBold';
+    font-size: 12px;
+}

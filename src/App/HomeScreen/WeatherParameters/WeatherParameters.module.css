@@ -1,0 +1,12 @@
+.wrapper{
+    width: 294px;
+    margin: 0 auto 30px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #957DCD 0%, #523D7F 100%);
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+}

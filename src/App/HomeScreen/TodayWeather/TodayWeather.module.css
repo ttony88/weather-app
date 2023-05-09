@@ -1,0 +1,36 @@
+@import url('../../../fonts.css');
+
+.wrapper{
+    margin: 0 auto 19px;
+    width: 176px;
+}
+
+.weatherParameters{
+    margin: 0 0 18px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'PoppinsSemiBold';
+    color: rgba(222, 221, 221, 1);
+}
+
+.temperature{
+    margin: 0 0 6px;
+    text-align: center;
+    font-family: 'PoppinsSemiBold';
+    font-size: 81px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.degree{
+    font-family: 'PoppinsRegular';
+}
+
+.dateAndTime{
+    font-family: 'PoppinsRegular';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
