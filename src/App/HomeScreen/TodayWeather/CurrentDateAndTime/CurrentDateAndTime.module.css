@@ -1,0 +1,9 @@
+.dateAndTime{
+    margin-bottom: 50px;
+    font-family: 'PoppinsRegular';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}

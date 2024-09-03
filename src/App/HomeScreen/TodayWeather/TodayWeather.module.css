@@ -6,7 +6,6 @@
 }
 
 .weatherParameters{
-    margin: 0 0 18px;
     text-align: center;
     font-weight: 600;
     font-size: 12px;
@@ -26,11 +25,11 @@
     font-family: 'PoppinsRegular';
 }
 
-.dateAndTime{
-    font-family: 'PoppinsRegular';
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 17px;
-    color: rgba(255, 255, 255, 1);
+.imgWeatherContainer{
     text-align: center;
+}
+
+.imgWeather{
+    width: 150px;
+    height: 150px;
 }

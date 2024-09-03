@@ -4,16 +4,19 @@ import WeatherParameter from '../../../common/WeatherParameter/WeatherParameter'
 import waterDropImg from '../../../img/water-drop.png'
 import windSpeedImg from '../../../img/wind-speed.png'
 
-const WeatherParameters = () => {
+const WeatherParameters = (props) => {
+
+const { currentPrecipitation, currentHumidity, currentWindSpeed } = props
+
     return(
         <div className={styles.wrapper}>
             <div className={styles.container}>
                 <WeatherParameter img={umbrellaImg} nameImg={'umbrella'} 
-                value={'35%'} title={'Precipitation'} />
+                value={`${currentPrecipitation}%`} title={'Precipitation'} />
                 <WeatherParameter img={waterDropImg} nameImg={'water drop'} 
-                value={'20%'} title={'Humidity'} />
+                value={`${currentHumidity}%`} title={'Humidity'} />
                 <WeatherParameter img={windSpeedImg} nameImg={'wind speed'} 
-                value={'9km/h'} title={'Wind Speed'} />
+                value={`${currentWindSpeed}km/h`} title={'Wind Speed'} />
             </div>
         </div>
     )

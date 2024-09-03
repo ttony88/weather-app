@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.input{
+    position: relative;
+    justify-content: flex-end;
+    padding: 0 10px;
+    width: 100%;
+    font-size: large;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.button{
+    position: absolute;
+    appearance:none;
+    -webkit-appearance:none;
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    background-color: #ffffff;
+    border: none;
+}
+
+.imgSearch{
+    width: 20px;
+}

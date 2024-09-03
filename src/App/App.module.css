@@ -1,1 +1,6 @@
-@import url('../fonts.css');
+html{
+    background: linear-gradient(180deg, rgba(53, 33, 99, 0.9) 0%, rgba(51, 25, 114, 0.8) 57.81%, rgba(51, 20, 60, 0.7) 100%),
+    url('../img/background.png') no-repeat center center  fixed;
+    min-height: 100%;
+    background-size: cover;
+}

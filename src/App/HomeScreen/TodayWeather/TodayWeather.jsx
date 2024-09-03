@@ -1,20 +1,19 @@
 import styles from './TodayWeather.module.css'
-import cloudyWeather from '../../../img/cloudy-weather.png'
 
-const TodayWeather = () => {
+const TodayWeather = (props) => {
+
+    const { currentTemperature, weatherName, weatherIcon } = props
+
     return(
         <div className={styles.wrapper}>
             <div className={styles.weatherParameters}>
-                Mostly Sunny
+                {weatherName}
             </div>
-            <div className={styles.imgWeather}>
-                <img src={cloudyWeather} alt='cloudy weather' />
+            <div className={styles.imgWeatherContainer}>
+                <img className={styles.imgWeather} src={weatherIcon} alt='cloudy weather' />
             </div>
             <div className={styles.temperature}>
-                23<span className={styles.degree}>&deg;</span>
-            </div>
-            <div className={styles.dateAndTime}>
-                Friday, 26 August 2022 | 10:00
+                {currentTemperature}<span className={styles.degree}>&deg;C</span>
             </div>
         </div>
     )

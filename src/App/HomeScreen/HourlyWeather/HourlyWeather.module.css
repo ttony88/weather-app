@@ -7,3 +7,12 @@
     font-family: 'PoppinsSemiBold';
     font-size: 12px;
 }
+
+.hourlyWeather{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

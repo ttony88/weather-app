@@ -1,0 +1,32 @@
+.container{
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(104, 101, 165);
+    box-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+}
+
+.input {
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0;
+    transition: 0.8s;
+} 
+
+.container:hover > .input{
+    width: 200px;
+}
+
+.button {
+    border: none;
+    background-color: rgb(104, 101, 165); 
+    border-radius: 5px;
+}
+
+.button img {
+    margin: 5px 2px 0 0;
+    width: 20px;
+    height: 20px;
+}
