@@ -44,6 +44,7 @@
     font-family: 'PoppinsRegular';
     font-size: 14px;
     color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px 1px #000;
     line-height: 35px;
     position: absolute;
     top: 0;

@@ -10,7 +10,8 @@
     font-weight: 600;
     font-size: 12px;
     font-family: 'PoppinsSemiBold';
-    color: rgba(222, 221, 221, 1);
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px 1px #000;
 }
 
 .temperature{
@@ -19,6 +20,7 @@
     font-family: 'PoppinsSemiBold';
     font-size: 81px;
     color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px 1px #000;
 }
 
 .degree{
