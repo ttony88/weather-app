@@ -60,11 +60,6 @@ if(isLoading){
             </div>
     )
 }
-
-
-  
-
-    
 }
 
 export default HomeScreen
