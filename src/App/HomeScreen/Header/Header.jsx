@@ -4,9 +4,7 @@ import searchIcon from '../../../img/search.svg'
 import settingsIcon from '../../../img/settings.svg'
 import SearchCity from './SearchCity/SearchCity'
 
-const Header = (props) => {
-
-    const { cityName } = props
+const Header = ({ cityName }) => {
 
     const navigane = useNavigate()
 
