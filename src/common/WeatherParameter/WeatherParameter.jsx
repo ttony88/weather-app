@@ -6,7 +6,7 @@ const WeatherParameter = (props) => {
 
     return(
         <div className={styles.parameter}>
-            <div className={styles.img}>
+            <div>
                 <img src={img} alt={nameImg} />
             </div>
             <div className={styles.value}>

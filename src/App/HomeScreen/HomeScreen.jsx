@@ -53,7 +53,9 @@ if(isLoading){
                     <CurrentDateAndTime />
                     <WeatherParameters currentPrecipitation={currentPrecipitation}
                                        currentHumidity={currentHumidity} 
-                                       currentWindSpeed={currentWindSpeed}/>
+                                       currentWindSpeed={currentWindSpeed}
+                                       weatherName={weatherName}
+                                       weatherIcon={weatherIcon} />
                     <HourlyWeather hourlyWeather={hourlyWeatherForToday} />
                     <Footer />
                 </div>

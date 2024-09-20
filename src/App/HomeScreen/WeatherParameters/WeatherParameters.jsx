@@ -4,9 +4,7 @@ import WeatherParameter from '../../../common/WeatherParameter/WeatherParameter'
 import waterDropImg from '../../../img/water-drop.png'
 import windSpeedImg from '../../../img/wind-speed.png'
 
-const WeatherParameters = (props) => {
-
-const { currentPrecipitation, currentHumidity, currentWindSpeed } = props
+const WeatherParameters = ({currentPrecipitation, currentHumidity, currentWindSpeed, weatherName, weatherIcon}) => {
 
     return(
         <div className={styles.wrapper}>
