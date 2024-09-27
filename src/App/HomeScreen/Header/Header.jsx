@@ -4,7 +4,7 @@ import searchIcon from '../../../img/search.svg'
 import settingsIcon from '../../../img/settings.svg'
 import SearchCity from './SearchCity/SearchCity'
 
-const Header = ({ cityName }) => {
+const Header = ({ cityName, changingCoordinates }) => {
 
     const navigane = useNavigate()
 
@@ -13,13 +13,14 @@ const Header = ({ cityName }) => {
             <div className={styles.container}>
                 <div className={styles.row}>
                     <div className={styles.buttonСhoiceCity}
-                            onClick={() => navigane('', { replace: false })}>
+                            onClick={() => navigane('/settings')}>
                         <img className={styles.settingsImg} src={settingsIcon} alt="settings" />
                     </div>
                     <p className={styles.city}>
                         {cityName}
                     </p>
-                    <SearchCity />
+                    <SearchCity changingCoordinates={changingCoordinates} />
+                    {/* <SearchCity /> */}
                     {/*<button className={styles.buttonReboot}
                             onClick={() => navigane('moscow', { replace: false })}>
                         <img className={styles.searchImg} src={searchIcon} alt="search" />
