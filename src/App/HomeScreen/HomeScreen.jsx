@@ -4,13 +4,26 @@ import TodayWeather from './TodayWeather/TodayWeather'
 import styles from './HomeScreen.module.css'
 import WeatherParameters from './WeatherParameters/WeatherParameters'
 import HourlyWeather from './HourlyWeather/HourlyWeather'
-import { useGeoLocation } from '../../hooks/useGeoLocation' 
 import { useGetForecastWeatherDataQuery } from '../../api/apiWeather'
 import CurrentDateAndTime from './TodayWeather/CurrentDateAndTime/CurrentDateAndTime'
+import { useGeolocated } from 'react-geolocated'
+import { useEffect, useState } from 'react'
+
 
 const HomeScreen = () => {
+    
+const { coords, isGeolocationAvailable, isGeolocationEnabled } =
+    useGeolocated({
+        positionOptions: {
+            enableHighAccuracy: false,
+        },
+        userDecisionTimeout: 1000,
+})
 
-const { lat, long } = useGeoLocation()
+const [coordsInSearch, setCoordsInSearch] = useState({})
+
+let lat = coordsInSearch.lat || coords?.latitude
+let long = coordsInSearch.long || coords?.longitude
 
 const {
     data,
@@ -19,7 +32,7 @@ const {
     isError,
     error
 } = useGetForecastWeatherDataQuery({lat, long})
- 
+
 if(isLoading){
 
     return (
@@ -31,7 +44,7 @@ if(isLoading){
 
 } else if(isError){
 
-    return <div>{error}</div>
+    return <div>{error.data.error.message}</div>
 
 } else if(isSuccess){
     const cityName = data.location.name
@@ -43,10 +56,13 @@ if(isLoading){
     const weatherIcon = data.current.condition.icon
     const hourlyWeatherForToday = data.forecast.forecastday[0].hour
 
+    const changingCoordinates = (lat, long) => setCoordsInSearch({lat, long})
+
     return (
             <div className={styles.wrapper}>
                 <div className={styles.container}>
-                    <Header cityName={cityName} />
+                    
+                    <Header changingCoordinates={changingCoordinates} cityName={cityName} />
                     <TodayWeather currentTemperature={currentTemperature}
                                   weatherName={weatherName}
                                   weatherIcon={weatherIcon} />
