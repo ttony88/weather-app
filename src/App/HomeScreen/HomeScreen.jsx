@@ -7,7 +7,7 @@ import HourlyWeather from './HourlyWeather/HourlyWeather'
 import { useGetForecastWeatherDataQuery } from '../../api/apiWeather'
 import CurrentDateAndTime from './TodayWeather/CurrentDateAndTime/CurrentDateAndTime'
 import { useGeolocated } from 'react-geolocated'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 
 const HomeScreen = () => {
@@ -19,6 +19,8 @@ const { coords, isGeolocationAvailable, isGeolocationEnabled } =
         },
         userDecisionTimeout: 1000,
 })
+
+const [isSearch, setIsSearch] = useState(false)
 
 const [coordsInSearch, setCoordsInSearch] = useState({})
 
@@ -62,7 +64,10 @@ if(isLoading){
             <div className={styles.wrapper}>
                 <div className={styles.container}>
                     
-                    <Header changingCoordinates={changingCoordinates} cityName={cityName} />
+                    <Header changingCoordinates={changingCoordinates} 
+                            cityName={cityName}
+                            isSearch={isSearch}
+                            setIsSearch={setIsSearch} />
                     <TodayWeather currentTemperature={currentTemperature}
                                   weatherName={weatherName}
                                   weatherIcon={weatherIcon} />
