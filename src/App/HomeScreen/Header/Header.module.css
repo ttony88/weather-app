@@ -12,15 +12,7 @@
 }
 
 .buttonСhoiceCity{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    background-color: rgb(104, 101, 165);
-    cursor: pointer;
-    box-shadow: 2px 2px 2px #000;
+    color: rgb(104, 101, 165);
 }
 
 .settingsImg{
